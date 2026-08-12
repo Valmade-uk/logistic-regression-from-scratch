@@ -4,6 +4,15 @@ A machine learning project that implements **logistic regression from scratch us
 
 The notebook covers the complete workflow from exploratory data analysis and feature engineering to forward propagation, backpropagation, gradient descent, prediction, and model evaluation.
 
+## Dataset
+
+This project uses the Spaceship Titanic dataset available on Kaggle:
+
+[Spaceship Titanic — Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
+
+The dataset is not included in this repository.  
+Download the data from Kaggle and place the CSV file inside the `Data/` directory before running the notebook.
+
 ## Project Overview
 
 The goal is to predict the binary target `Transported` using passenger-related features.

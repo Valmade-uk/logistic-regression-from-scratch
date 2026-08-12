@@ -110,7 +110,7 @@ deep_learning_course/
 ├── Data/
 │   └── Module_1_Lecture_2_Class_Spaceship_Titanic.csv
 ├── Notebooks/
-│   └── lesson_02_eda.ipynb
+│   └── logistic-regression-from-scratch.ipynb
 ├── .gitignore
 └── README.md
 ```

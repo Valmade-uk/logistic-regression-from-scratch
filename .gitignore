@@ -5,4 +5,4 @@ __pycache__/
 *.pyc
 
 # Course dataset - do not publish until redistribution rights are confirmed
-Data/*.csv
+data/*.csv

@@ -106,11 +106,9 @@ The notebook also visualizes the change in the cost function during training.
 ## Project Structure
 
 ```text
-deep_learning_course/
-├── Data/
-│   └── Module_1_Lecture_2_Class_Spaceship_Titanic.csv
+logistic-regression-from-scratch/
 ├── Notebooks/
-│   └── logistic-regression-from-scratch.ipynb
+│   └── logistic_regression_from_scratch.ipynb
 ├── .gitignore
 └── README.md
 ```

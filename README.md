@@ -107,7 +107,8 @@ The notebook also visualizes the change in the cost function during training.
 
 ```text
 logistic-regression-from-scratch/
-├── Notebooks/
+├── data/
+├── notebooks/
 │   └── logistic_regression_from_scratch.ipynb
 ├── .gitignore
 └── README.md

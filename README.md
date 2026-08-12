@@ -11,7 +11,7 @@ This project uses the Spaceship Titanic dataset available on Kaggle:
 [Spaceship Titanic — Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
 
 The dataset is not included in this repository.  
-Download the data from Kaggle and place the CSV file inside the `Data/` directory before running the notebook.
+Download the data from Kaggle and place the CSV file inside the `data/` directory before running the notebook.
 
 ## Project Overview
 

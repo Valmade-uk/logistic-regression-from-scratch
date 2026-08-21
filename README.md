@@ -89,12 +89,30 @@ neural-networks-from-scratch-to-pytorch/
 │   ├── logistic_regression_from_scratch/
 │   │   ├── logistic_regression_from_scratch.ipynb
 │   │   └── README.md
-│   └── multiclass_classification_penguins/
-│       ├── multiclass_classification_penguins.ipynb
-│       └── README.md
+│   │
+│   ├── multiclass_classification_penguins/
+│   │   ├── multiclass_classification_penguins.ipynb
+│   │   └── README.md
+│   │
+│   └── learning/
+│       ├── pytorch_logistic_regression.ipynb
+│       └── pytorch_tensors_basics.ipynb
 ├── .gitignore
 └── README.md
 ```
+
+## Learning Notebooks
+
+Additional notebooks used for studying PyTorch fundamentals and reproducing course examples are available in:
+
+`notebooks/learning/`
+
+Current learning notebooks include:
+
+- `pytorch_tensors_basics.ipynb` — PyTorch tensor creation, operations, broadcasting, reshaping, NumPy interoperability, and device handling
+- `pytorch_logistic_regression.ipynb` — implementation of binary logistic regression using PyTorch
+
+These notebooks are kept separate from the finished portfolio projects.
 
 ## Datasets
 
@@ -102,15 +120,17 @@ Dataset files are not included in the repository.
 
 ### Spaceship Titanic
 
-Available on Kaggle:
+The Spaceship Titanic dataset is available on Kaggle:
 
 [Spaceship Titanic — Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
+
+Download the required CSV file and place it in the local `data/` directory before running the notebook.
 
 ### Palmer Penguins
 
 The Palmer Penguins dataset is used for the multiclass classification project.
 
-Place the required CSV files in the local `data/` directory before running the notebooks.
+The dataset is not included in this repository. Place the required CSV file in the local `data/` directory before running the notebook.
 
 ## Installation
 
@@ -140,7 +160,9 @@ Open the notebooks in VS Code or Jupyter and run the cells in order.
 
 The first project focuses on understanding how a simple neural network works internally by implementing logistic regression manually with NumPy.
 
-The second project moves to PyTorch and introduces multiclass classification, automatic differentiation, neural network modules, ReLU activation, Cross-Entropy Loss, and SGD optimization.
+The second project moves to PyTorch and introduces multiclass classification, automatic differentiation, neural network modules, ReLU activation, Cross-Entropy Loss, SGD optimization, and training/validation analysis.
+
+The learning notebooks complement these projects by documenting core PyTorch concepts such as tensors, broadcasting, reshaping, device handling, and framework-based logistic regression.
 
 Future projects will extend this progression toward deeper neural networks, computer vision, and NLP.
 

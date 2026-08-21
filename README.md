@@ -1,160 +1,148 @@
-# Logistic Regression from Scratch — Spaceship Titanic
+# Neural Networks from Scratch to PyTorch
 
-A machine learning project that implements **logistic regression from scratch using NumPy** and applies it to the Spaceship Titanic binary classification problem.
+A collection of machine learning and deep learning projects created as part of my studies.
 
-The notebook covers the complete workflow from exploratory data analysis and feature engineering to forward propagation, backpropagation, gradient descent, prediction, and model evaluation.
+This repository follows a practical progression from implementing the mechanics of a simple neural network manually with NumPy to building and training neural networks with PyTorch.
 
-## Dataset
+## Projects
 
-This project uses the Spaceship Titanic dataset available on Kaggle:
+### 1. Logistic Regression from Scratch — Spaceship Titanic
 
-[Spaceship Titanic — Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
+A binary classification project that implements logistic regression manually using NumPy.
 
-The dataset is not included in this repository.  
-Download the data from Kaggle and place the CSV file inside the `data/` directory before running the notebook.
+**Notebook:**  
+`notebooks/logistic_regression_from_scratch/logistic_regression_from_scratch.ipynb`
 
-## Project Overview
+Main topics:
 
-The goal is to predict the binary target `Transported` using passenger-related features.
-
-Instead of relying on a ready-made logistic regression estimator, the model training logic is implemented manually with NumPy in order to understand the core mechanics behind a simple neural network:
-
+- exploratory data analysis
+- feature engineering
+- missing-value handling
+- one-hot encoding
 - parameter initialization
-- linear transformation
 - sigmoid activation
 - binary cross-entropy loss
 - forward propagation
 - backpropagation
 - gradient descent
-- prediction and accuracy evaluation
+- prediction and evaluation
 
-## Workflow
-
-### 1. Exploratory Data Analysis
-
-The notebook explores:
-
-- target distribution
-- categorical, continuous, and text features
-- correlations between numerical variables
-- service usage patterns
-
-Additional binary features are created to indicate whether a passenger used services such as:
-
-- RoomService
-- FoodCourt
-- ShoppingMall
-- Spa
-- VRDeck
-
-### 2. Data Preprocessing
-
-The preprocessing pipeline includes:
-
-- median imputation for numerical missing values
-- explicit categories for missing categorical values
-- missing-value indicators for `CryoSleep` and `VIP`
-- conversion of binary variables to integers
-- one-hot encoding of `HomePlanet` and `Destination`
-- removal of unprocessed text columns
-- stratified train/test split
-- matrix transposition for the NumPy implementation
-
-### 3. Logistic Regression from Scratch
-
-The model is implemented using NumPy and includes:
-
-```python
-z = np.dot(w.T, x_train) + b
-```
-
-followed by the sigmoid activation:
-
-```python
-y_head = 1 / (1 + np.exp(-z))
-```
-
-Binary cross-entropy is used as the loss function.
-
-Gradients for the weights and bias are calculated manually and the parameters are updated using gradient descent.
-
-### 4. Model Evaluation
-
-Training configuration used in the notebook:
-
-- learning rate: `0.00001`
-- iterations: `50`
-
-Results:
+Final results:
 
 | Metric | Accuracy |
 |---|---:|
 | Training accuracy | 77.94% |
 | Test accuracy | 79.37% |
 
-The notebook also visualizes the change in the cost function during training.
+---
+
+### 2. Multiclass Classification with PyTorch — Palmer Penguins
+
+A multiclass classification project using a small feed-forward neural network implemented with PyTorch.
+
+**Notebook:**  
+`notebooks/multiclass_classification_penguins/multiclass_classification_penguins.ipynb`
+
+The model classifies penguins into three species:
+
+- Adelie
+- Gentoo
+- Chinstrap
+
+Main topics:
+
+- exploratory data analysis
+- numerical feature standardization
+- one-hot encoding of categorical features
+- train/validation split
+- PyTorch tensor preparation
+- feed-forward neural networks
+- ReLU activation
+- Cross-Entropy Loss
+- SGD optimization
+- training and validation tracking
+- loss and accuracy analysis
+
+Final results:
+
+| Metric | Accuracy |
+|---|---:|
+| Training accuracy | 98.65% |
+| Validation accuracy | 97.27% |
 
 ## Technologies
 
 - Python
 - NumPy
 - pandas
-- Matplotlib
+- PyTorch
 - scikit-learn
+- Matplotlib
+- seaborn
 - Jupyter Notebook
 
-## Project Structure
+## Repository Structure
 
 ```text
-logistic-regression-from-scratch/
-├── data/
+neural-networks-from-scratch-to-pytorch/
 ├── notebooks/
-│   └── logistic_regression_from_scratch.ipynb
+│   ├── logistic_regression_from_scratch/
+│   │   ├── logistic_regression_from_scratch.ipynb
+│   │   └── README.md
+│   └── multiclass_classification_penguins/
+│       ├── multiclass_classification_penguins.ipynb
+│       └── README.md
 ├── .gitignore
 └── README.md
 ```
 
+## Datasets
+
+Dataset files are not included in the repository.
+
+### Spaceship Titanic
+
+Available on Kaggle:
+
+[Spaceship Titanic — Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
+
+### Palmer Penguins
+
+The Palmer Penguins dataset is used for the multiclass classification project.
+
+Place the required CSV files in the local `data/` directory before running the notebooks.
+
 ## Installation
 
-Clone the repository and create a virtual environment:
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd <repository-name>
+```
+
+Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the required packages:
+Install the main dependencies:
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn jupyter ipykernel
+pip install numpy pandas matplotlib seaborn scikit-learn torch jupyter ipykernel
 ```
 
-Open the notebook in VS Code or Jupyter and run the cells in order.
+Open the notebooks in VS Code or Jupyter and run the cells in order.
 
-## What I Learned
+## Learning Progression
 
-This project was created as part of my Deep Learning studies and focuses on understanding what happens inside a simple neural network before moving to deep learning frameworks such as PyTorch.
+The first project focuses on understanding how a simple neural network works internally by implementing logistic regression manually with NumPy.
 
-The main learning outcomes were:
+The second project moves to PyTorch and introduces multiclass classification, automatic differentiation, neural network modules, ReLU activation, Cross-Entropy Loss, and SGD optimization.
 
-- understanding logistic regression as a single-neuron binary classifier
-- implementing forward propagation manually
-- understanding sigmoid activation
-- calculating binary cross-entropy loss
-- implementing gradients and backpropagation
-- updating model parameters with gradient descent
-- preparing tabular data for model training
-- evaluating train and test performance
-
-## Future Improvements
-
-Possible next steps include:
-
-- feature scaling
-- experimenting with different learning rates and iteration counts
-- comparing the manual implementation with `sklearn.linear_model.LogisticRegression`
-- adding validation metrics such as precision, recall, F1-score, ROC-AUC, and a confusion matrix
-- refactoring preprocessing into a reusable pipeline
+Future projects will extend this progression toward deeper neural networks, computer vision, and NLP.
 
 ## Author
 
